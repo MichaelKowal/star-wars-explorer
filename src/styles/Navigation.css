@@ -1,0 +1,54 @@
+.navigation .menu-button {
+    margin-right: 0.75rem;
+}
+
+.search {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-right: 1rem;
+    margin-left: 0;
+}
+.search:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.search-icon {
+    padding: 0 1rem;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.input-root {
+    color: inherit;
+}
+.input-root .input-input {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    margin-left: 3rem;
+    transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (min-width: 960px) {
+    .input-input {
+        width: 20ch;
+    }
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.drawer-paper {
+    width: 30%;
+    min-width: 15rem;
+}
+
+.drawer .language-selector {
+    margin: 0.5rem 1rem;
+}

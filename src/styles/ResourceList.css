@@ -1,0 +1,19 @@
+.custom-grid {
+    flex-basis: 20%;
+}
+
+.custom-grid button {
+    height: 4rem;
+    width: 100%;
+}
+
+.resource-list {
+    margin: 3rem;
+}
+
+.resource-list-controls {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
