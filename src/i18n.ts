@@ -13,6 +13,7 @@ i18next.init({
                 "common-next": "Next",
                 "common-no-response-error": "No data received from {{url}}",
                 "common-no-results": "Your search had no results.",
+                "common-no-resource": "No resource available at {{url}}",
                 "common-people": "People",
                 "common-planets": "Planets",
                 "common-previous": "Previous",
