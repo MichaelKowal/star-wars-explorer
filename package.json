@@ -25,7 +25,7 @@
     },
     "scripts": {
         "start": "react-scripts start",
-        "start:build": "react-scripts build && http-serve ./build",
+        "start:prod": "react-scripts build && http-serve ./build",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
