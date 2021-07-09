@@ -29,7 +29,11 @@ const ResourceList: React.FC<ResourceListProps> = ({
             <Grid container spacing={2}>
                 {resources.results.map((r: any, i: number) => (
                     <Grid item className="custom-grid" key={i}>
-                        <Button onClick={() => handleResourceClick(r.url)}>
+                        <Button
+                            color="primary"
+                            variant="outlined"
+                            onClick={() => handleResourceClick(r.url)}
+                        >
                             {r.name ?? r.title}
                         </Button>
                     </Grid>
@@ -37,6 +41,7 @@ const ResourceList: React.FC<ResourceListProps> = ({
             </Grid>
             <div className="resource-list-controls">
                 <Button
+                    color="primary"
                     disabled={resources.previous === null}
                     onClick={() => handlePreviousClick(resources.previous)}
                 >
@@ -46,6 +51,7 @@ const ResourceList: React.FC<ResourceListProps> = ({
                     resources.count / 10
                 )}`}</Typography>
                 <Button
+                    color="primary"
                     disabled={resources.next === null}
                     onClick={() => handleNextClick(resources.next)}
                 >

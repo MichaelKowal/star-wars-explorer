@@ -24,6 +24,8 @@ const Home: React.FC = () => {
             <Grid direction="row" justify="space-evenly" container>
                 <Grid item key="films">
                     <Button
+                        variant="outlined"
+                        color="primary"
                         onClick={() => handleClickButton("films", "Wwahanscc")}
                     >
                         {i18next.t("common-films")}
@@ -31,6 +33,8 @@ const Home: React.FC = () => {
                 </Grid>
                 <Grid item key="people">
                     <Button
+                        variant="outlined"
+                        color="primary"
                         onClick={() =>
                             handleClickButton("people", "Akwoooakanwo")
                         }
@@ -40,6 +44,8 @@ const Home: React.FC = () => {
                 </Grid>
                 <Grid item key="planets">
                     <Button
+                        variant="outlined"
+                        color="primary"
                         onClick={() =>
                             handleClickButton("planets", "Akanrawhwoaoc")
                         }
@@ -49,6 +55,8 @@ const Home: React.FC = () => {
                 </Grid>
                 <Grid item key="species">
                     <Button
+                        variant="outlined"
+                        color="primary"
                         onClick={() =>
                             handleClickButton("species", "Cakwooaahwoc")
                         }
@@ -58,6 +66,8 @@ const Home: React.FC = () => {
                 </Grid>
                 <Grid item key="starships">
                     <Button
+                        variant="outlined"
+                        color="primary"
                         onClick={() =>
                             handleClickButton("starships", "Caorarccacahakc")
                         }
@@ -67,6 +77,8 @@ const Home: React.FC = () => {
                 </Grid>
                 <Grid item key="vehicles">
                     <Button
+                        variant="outlined"
+                        color="primary"
                         onClick={() =>
                             handleClickButton("vehicles", "Howoacahoaanwoc")
                         }

@@ -3,14 +3,12 @@ import {
     Drawer,
     FormControl,
     FormLabel,
-    IconButton,
     InputBase,
     MenuItem,
     Select,
     Toolbar,
     Typography
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import React, { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
@@ -20,14 +18,14 @@ import { SupportedLanguages } from "../models/SupportedLanguages";
 import "../styles/Navigation.css";
 
 const Navigation: React.FC = () => {
-    const { currentPage, locale, handleChangeLanguage, handleNewPage } =
+    const { locale, handleChangeLanguage, handleNewPage } =
         useContext(AppContext);
     const [showDrawer, setShowDrawer] = useState<boolean>(false);
     const [searchText, setSearchText] = useState<string>("");
 
-    const handleClickMenu = () => {
-        setShowDrawer(!showDrawer);
-    };
+    // const handleClickMenu = () => {
+    //     setShowDrawer(!showDrawer);
+    // };
 
     const handleCloseDrawer = () => {
         setShowDrawer(false);
@@ -92,6 +90,7 @@ const Navigation: React.FC = () => {
         <>
             <AppBar position="static" className="navigation">
                 <Toolbar>
+                    {/* TODO: add language support
                     <IconButton
                         edge="start"
                         className={"menu-button"}
@@ -100,9 +99,9 @@ const Navigation: React.FC = () => {
                         onClick={handleClickMenu}
                     >
                         <MenuIcon />
-                    </IconButton>
+                    </IconButton> */}
                     <Typography variant="h3" className="title">
-                        {i18n.t(`common-${currentPage.type}`)}
+                        {i18n.t(`common-product-name`)}
                     </Typography>
                     <div className={"search"}>
                         <div className={"search-icon"}>

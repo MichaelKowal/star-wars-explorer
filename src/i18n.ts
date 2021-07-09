@@ -16,6 +16,7 @@ i18next.init({
                 "common-people": "People",
                 "common-planets": "Planets",
                 "common-previous": "Previous",
+                "common-product-name": "Star Wars Explorer",
                 "common-request-error": "Error fetching data from {{url}}",
                 "common-search": "Search",
                 "common-species": "Species",

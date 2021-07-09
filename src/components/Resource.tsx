@@ -1,11 +1,4 @@
-import {
-    Container,
-    Link,
-    List,
-    ListItem,
-    Snackbar,
-    Typography
-} from "@material-ui/core";
+import { Container, Snackbar, Typography } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import React, {
     useCallback,
@@ -22,6 +15,7 @@ import { Snippet } from "../models/Snippet";
 import "../styles/Resource.css";
 import { fetchData } from "../utils/dataUtils";
 import Loader from "./Loader";
+import ResourceInfo from "./ResourceInfo";
 import ResourceList from "./ResourceList";
 
 const Resource: React.FC = () => {
@@ -100,67 +94,10 @@ const Resource: React.FC = () => {
                 )}
                 {!isLoading &&
                     (info?.resourceInfo.name || info?.resourceInfo.title) && (
-                        <Container>
-                            <List className="item-detail-list">
-                                {Object.keys(info.resourceInfo).map((key) => {
-                                    let element = null;
-                                    if (
-                                        info.resourceInfo[key] instanceof Array
-                                    ) {
-                                        element = (
-                                            <>
-                                                {info.resourceInfo[key].map(
-                                                    (item: string) => {
-                                                        if (
-                                                            /https:\/\/swapi.dev.*/.test(
-                                                                item
-                                                            )
-                                                        ) {
-                                                            return (
-                                                                <Link
-                                                                    onClick={() =>
-                                                                        handleClickItem(
-                                                                            item
-                                                                        )
-                                                                    }
-                                                                    key={item}
-                                                                >
-                                                                    {item}
-                                                                </Link>
-                                                            );
-                                                        } else
-                                                            return (
-                                                                <Typography>
-                                                                    {item}
-                                                                </Typography>
-                                                            );
-                                                    }
-                                                )}
-                                            </>
-                                        );
-                                    } else
-                                        element = (
-                                            <Typography key="body">
-                                                {info.resourceInfo[key]}
-                                            </Typography>
-                                        );
-                                    return (
-                                        <ListItem
-                                            key={key}
-                                            className="item-detail"
-                                        >
-                                            <Typography
-                                                variant="overline"
-                                                key="title"
-                                            >
-                                                {key}
-                                            </Typography>
-                                            {element}
-                                        </ListItem>
-                                    );
-                                })}
-                            </List>
-                        </Container>
+                        <ResourceInfo
+                            info={info}
+                            handleClickItem={handleClickItem}
+                        />
                     )}
                 {!isLoading && !info && (
                     <Typography>{i18n.t("common-no-resource")}</Typography>
